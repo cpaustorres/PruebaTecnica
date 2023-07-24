@@ -1,0 +1,57 @@
+﻿@page
+@model Pruebalocal.Pages.IndexModel
+@{
+    ViewData["Title"] = "Prueba técnica";
+}
+<script>
+    // Obtener la lista de usuarios 
+    var users = @Json.Serialize(Model.Users);
+   
+</script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="userForm" method="post">
+        <select id="selectUser" asp-for="@Model.SelectedUserId" asp-items="@Model.UserSelectList">
+            <option value="">Seleccione un usuario</option>
+        </select>
+    </form>
+    <div id="userDataContainer">
+        <h2>Datos usuario</h2>
+        <div>
+            <p class="ocultar-bloque-usuario">Nombre: <span id="nombre">@Model.UserViewModel.Nombre</span></p>
+            <p class="ocultar-bloque-usuario">Apellidos: <span id="apellidos">@Model.UserViewModel.Apellidos</span></p>
+            <p class="ocultar-bloque-usuario">DNI: <span id="dni">@Model.UserViewModel.Dni</span></p>
+            <p class="ocultar-bloque-usuario">Carnet: <span id="carnet">@Model.UserViewModel.Carnet</span></p>
+            <p class="ocultar-bloque-usuario">Teléfono: <span id="telefono">@Model.UserViewModel.Telefono</span></p>
+
+            <p id="mensajeNoUsuarioSeleccionado">Seleccione un usuario para ver sus detalles.</p>
+        </div>
+    </div>
+
+    <div id="vehicleContainer">
+        <h2>Vehículos en propiedad</h2>
+        <table id="vehicleTable" class="vehicle-table">
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Potencia</th>
+                    <th>Categoría</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los vehículos se añadirán aquí con la llamada api-->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="~/js/site.js"></script>
+
+</body>
+</html>
+

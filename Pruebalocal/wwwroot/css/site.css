@@ -1,0 +1,96 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/*USUARIOS*/
+/* Estilos para el contenedor de información del usuario */
+.user-info-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+/* Estilos para los párrafos con la información del usuario */
+.user-info {
+    margin: 10px 0;
+}
+
+    .user-info label {
+        font-weight: bold;
+    }
+
+/* Estilos para el mensaje cuando no hay usuario seleccionado */
+#mensajeNoUsuarioSeleccionado {
+    font-style: italic;
+    color: #888;
+}
+
+.ocultar-bloque-usuario {
+    display: none;
+}
+
+/*VEHICULOS*/
+
+/* En tu CSS o etiqueta <style> en el head */
+.vehicle-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    .vehicle-table th,
+    .vehicle-table td {
+        padding: 10px;
+        border: 1px solid #ddd; /* Agrega bordes de 1px de ancho con color gris claro (#ddd) */
+        text-align: left; /* Alinea el texto a la izquierda en las celdas */
+    }
+
+    .vehicle-table th {
+        background-color: #f2f2f2; /* Agrega un color de fondo a las celdas del encabezado (opcional) */
+    }
+
+    .vehicle-table tbody tr:nth-child(even) {
+        background-color: #f9f9f9; /* Agrega un color de fondo alternado para filas pares (opcional) */
+    }
+
+    /* Ancho fijo para cada columna */
+    .vehicle-table th:nth-child(1),
+    .vehicle-table td:nth-child(1) {
+        width: 15%; /* Ancho del 15% para la primera columna */
+    }
+
+    .vehicle-table th:nth-child(2),
+    .vehicle-table td:nth-child(2) {
+        width: 25%; /* Ancho del 25% para la segunda columna */
+    }
+
+    .vehicle-table th:nth-child(3),
+    .vehicle-table td:nth-child(3) {
+        width: 10%; /* Ancho del 10% para la tercera columna */
+    }
+
+    .vehicle-table th:nth-child(4),
+    .vehicle-table td:nth-child(4) {
+        width: 30%; /* Ancho del 30% para la cuarta columna */
+    }
+
+    .vehicle-table th:nth-child(5),
+    .vehicle-table td:nth-child(5) {
+        width: 20%; /* Ancho del 20% para la quinta columna */
+    }
