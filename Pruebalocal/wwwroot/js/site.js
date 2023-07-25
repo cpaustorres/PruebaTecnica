@@ -2,7 +2,6 @@
     // Obtener referencias a los elementos del DOM
     const selectUser = document.getElementById('selectUser');
     const vehicleList = document.getElementById('vehicleList');
-    
     const apiUrl = document.getElementById("apiUrl1Data").getAttribute("data-api-url");
     const apiUrlWithEndpoint = apiUrl + "/api/Vehicle/user/";
 
