@@ -36,7 +36,7 @@ namespace Pruebalocal.Pages
         // Private Methods
         private async Task LoadData()
         {
-            Users = await _userRepository.GetAllUsers();
+            Users = await _userRepository.GetAllUsersAsync();
             InitializeUserSelectList();
             UserViewModel = Users?.Count > 0 ? Users[0] : null;
         }

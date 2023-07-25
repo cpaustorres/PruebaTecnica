@@ -6,11 +6,11 @@ namespace Pruebalocal.Data
 {
     public interface IVehicleRepository
     {
-        Task<List<VehicleViewModel>> GetAllVehicles();
-        Task<VehicleViewModel> GetVehicleById(int id);
-        Task AddVehicle(VehicleViewModel vehicle);
-        Task UpdateVehicle(VehicleViewModel vehicle);
-        Task DeleteVehicle(int id);
-        Task<List<VehicleViewModel>> GetVehiclesByUserId(int userId);
+        Task<List<VehicleViewModel>> GetAllVehiclesAsync();
+        Task<VehicleViewModel> GetVehicleByIdAsync(int id);
+        Task AddVehicleAsync(VehicleViewModel vehicle);
+        Task UpdateVehicleAsync(VehicleViewModel vehicle);
+        Task DeleteVehicleAsync(int id);
+        Task<List<VehicleViewModel>> GetVehiclesByUserIdAsync(int userId);
     }
 }

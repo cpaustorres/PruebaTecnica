@@ -37,7 +37,7 @@ namespace Pruebalocal.Controllers
         [HttpGet("user/{userId}")]
         public async Task<ActionResult<IEnumerable<VehicleViewModel>>> GetVehiclesByUserId(int userId)
         {
-            List<VehicleViewModel> vehicles = await _vehicleRepository.GetVehiclesByUserId(userId);
+            List<VehicleViewModel> vehicles = await _vehicleRepository.GetVehiclesByUserIdAsync(userId);
 
             if (vehicles == null || vehicles.Count == 0)
             {

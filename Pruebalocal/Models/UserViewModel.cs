@@ -4,10 +4,11 @@ using System.Text.Json.Serialization;
 
 namespace Pruebalocal.Models
 {
-
     [Table("Usuarios")]
     public class UserViewModel
     {
+        // Propiedades
+        [Key]
         [JsonPropertyName("id")]
         public int Id { get; set; }
 
@@ -28,8 +29,5 @@ namespace Pruebalocal.Models
 
         [JsonPropertyName("telefono")]
         public string Telefono { get; set; }
-
-        [NotMapped] // Esta propiedad no se mapeará a la base de datos
-        public List<UserViewModel> Usuarios { get; set; }
     }
 }

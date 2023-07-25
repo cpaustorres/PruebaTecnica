@@ -50,6 +50,19 @@
         </table>
     </div>
 
+    @{
+        // Leer la configuración de appsettings.json
+        var configuration = new ConfigurationBuilder()
+        .AddJsonFile("appsettings.json")
+        .Build();
+
+        // Obtener la URL base de la API desde la sección "AppSettings" en la configuración
+        var apiUrl1 = configuration.GetSection("AppSettings")["ApiBaseUrl"];
+    }
+
+    <!-- Asignar el valor apiUrl1 a un atributo data en un elemento HTML -->
+    <div id="apiUrl1Data" data-api-url="@apiUrl1"></div>
+
     <script src="~/js/site.js"></script>
 
 </body>

@@ -6,10 +6,10 @@ namespace Pruebalocal.Data
 {
     public interface IUserRepository
     {
-        Task<List<UserViewModel>> GetAllUsers();
-        Task<UserViewModel> GetUserById(int id);
-        Task AddUser(UserViewModel user);
-        Task UpdateUser(UserViewModel user);
-        Task DeleteUser(int id);
+        Task<List<UserViewModel>> GetAllUsersAsync();
+        Task<UserViewModel> GetUserByIdAsync(int id);
+        Task AddUserAsync(UserViewModel user);
+        Task UpdateUserAsync(UserViewModel user);
+        Task DeleteUserAsync(int id);
     }
 }

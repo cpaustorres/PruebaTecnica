@@ -22,7 +22,7 @@ namespace Pruebalocal.Controllers
         {
             // Aquí implementa la lógica para obtener todos los usuarios desde tu base de datos
             // El método GetAllUsers() del IUserRepository puede manejar la obtención de los usuarios
-            List<UserViewModel> users = await _userRepository.GetAllUsers();
+            List<UserViewModel> users = await _userRepository.GetAllUsersAsync();
 
             if (users == null || users.Count == 0)
             {

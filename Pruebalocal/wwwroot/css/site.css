@@ -1,30 +1,27 @@
-html {
-  font-size: 14px;
-}
-
+/* Configuración global */
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    font-size: 14px;
+    min-height: 100%;
+    position: relative;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 
-/*USUARIOS*/
 /* Estilos para el contenedor de información del usuario */
 .user-info-container {
-    padding: 20px;
+    background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #f9f9f9;
     margin-bottom: 20px;
+    padding: 20px;
 }
 
 /* Estilos para los párrafos con la información del usuario */
@@ -38,59 +35,57 @@ body {
 
 /* Estilos para el mensaje cuando no hay usuario seleccionado */
 #mensajeNoUsuarioSeleccionado {
-    font-style: italic;
     color: #888;
+    font-style: italic;
 }
 
 .ocultar-bloque-usuario {
     display: none;
 }
 
-/*VEHICULOS*/
-
-/* En tu CSS o etiqueta <style> en el head */
+/* Estilos para la tabla de vehículos */
 .vehicle-table {
     border-collapse: collapse;
     width: 100%;
 }
 
-    .vehicle-table th,
-    .vehicle-table td {
+    .vehicle-table td,
+    .vehicle-table th {
+        border: 1px solid #ddd;
         padding: 10px;
-        border: 1px solid #ddd; /* Agrega bordes de 1px de ancho con color gris claro (#ddd) */
-        text-align: left; /* Alinea el texto a la izquierda en las celdas */
+        text-align: left;
     }
 
     .vehicle-table th {
-        background-color: #f2f2f2; /* Agrega un color de fondo a las celdas del encabezado (opcional) */
+        background-color: #f2f2f2;
     }
 
     .vehicle-table tbody tr:nth-child(even) {
-        background-color: #f9f9f9; /* Agrega un color de fondo alternado para filas pares (opcional) */
+        background-color: #f9f9f9;
     }
 
     /* Ancho fijo para cada columna */
-    .vehicle-table th:nth-child(1),
-    .vehicle-table td:nth-child(1) {
-        width: 15%; /* Ancho del 15% para la primera columna */
+    .vehicle-table td:nth-child(1),
+    .vehicle-table th:nth-child(1) {
+        width: 15%;
     }
 
-    .vehicle-table th:nth-child(2),
-    .vehicle-table td:nth-child(2) {
-        width: 25%; /* Ancho del 25% para la segunda columna */
+    .vehicle-table td:nth-child(2),
+    .vehicle-table th:nth-child(2) {
+        width: 25%;
     }
 
-    .vehicle-table th:nth-child(3),
-    .vehicle-table td:nth-child(3) {
-        width: 10%; /* Ancho del 10% para la tercera columna */
+    .vehicle-table td:nth-child(3),
+    .vehicle-table th:nth-child(3) {
+        width: 10%;
     }
 
-    .vehicle-table th:nth-child(4),
-    .vehicle-table td:nth-child(4) {
-        width: 30%; /* Ancho del 30% para la cuarta columna */
+    .vehicle-table td:nth-child(4),
+    .vehicle-table th:nth-child(4) {
+        width: 30%;
     }
 
-    .vehicle-table th:nth-child(5),
-    .vehicle-table td:nth-child(5) {
-        width: 20%; /* Ancho del 20% para la quinta columna */
+    .vehicle-table td:nth-child(5),
+    .vehicle-table th:nth-child(5) {
+        width: 20%;
     }

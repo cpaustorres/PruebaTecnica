@@ -5,6 +5,7 @@ namespace Pruebalocal.Models
     [Table("Vehiculos")]
     public class VehicleViewModel
     {
+        // Propiedades
         public int Id { get; set; }
         public string Marca { get; set; }
         public string Modelo { get; set; }

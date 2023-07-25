@@ -8,10 +8,8 @@ namespace Pruebalocal.Data
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
-
         public DbSet<UserViewModel> Users { get; set; }
         public DbSet<VehicleViewModel> Vehicles { get; set; }
 
- 
     }
 }

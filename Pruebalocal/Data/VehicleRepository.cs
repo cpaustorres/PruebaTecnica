@@ -16,7 +16,7 @@ namespace Pruebalocal.Data
             _dbContext = dbContext;
         }
 
-        public async Task<List<VehicleViewModel>> GetAllVehicles()
+        public async Task<List<VehicleViewModel>> GetAllVehiclesAsync()
         {
             try
             {
@@ -24,36 +24,34 @@ namespace Pruebalocal.Data
             }
             catch (Exception ex)
             {
-                // Aquí puedes manejar la excepción, registrarla o devolver un mensaje de error más informativo.
-                // Por ejemplo:
                 Console.WriteLine($"Error al obtener vehículos: {ex.Message}");
                 return new List<VehicleViewModel>();
             }
         }
 
-        public async Task<VehicleViewModel> GetVehicleById(int id)
+        public async Task<VehicleViewModel> GetVehicleByIdAsync(int id)
         {
             return await _dbContext.Vehicles.FindAsync(id);
         }
 
-        public async Task<List<VehicleViewModel>> GetVehiclesByUserId(int userId)
+        public async Task<List<VehicleViewModel>> GetVehiclesByUserIdAsync(int userId)
         {
             return await _dbContext.Vehicles.Where(v => v.UsuarioId == userId).ToListAsync();
         }
 
-        public async Task AddVehicle(VehicleViewModel vehicle)
+        public async Task AddVehicleAsync(VehicleViewModel vehicle)
         {
             _dbContext.Vehicles.Add(vehicle);
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task UpdateVehicle(VehicleViewModel vehicle)
+        public async Task UpdateVehicleAsync(VehicleViewModel vehicle)
         {
             _dbContext.Entry(vehicle).State = EntityState.Modified;
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task DeleteVehicle(int id)
+        public async Task DeleteVehicleAsync(int id)
         {
             var vehicle = await _dbContext.Vehicles.FindAsync(id);
             if (vehicle != null)
