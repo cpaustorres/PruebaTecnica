@@ -6,7 +6,6 @@
     const apiUrl = document.getElementById("apiUrl1Data").getAttribute("data-api-url");
     const apiUrlWithEndpoint = apiUrl + "/api/Vehicle/user/";
 
-    debugger;
     let isFirstExecution = true;
 
     // Función para actualizar la información del usuario en la página
